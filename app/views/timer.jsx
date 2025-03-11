@@ -5,7 +5,7 @@ const Timer = ({ cycle, onTimerDone }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    let one_minute_timeout;
+    let one_minute_interval;
 
     if (time === cycle[index]) {
       setTime(0);
@@ -17,19 +17,19 @@ const Timer = ({ cycle, onTimerDone }) => {
         onTimerDone();
       }
     } else {
-      one_minute_timeout = setTimeout(() => {
+      one_minute_interval = setInterval(() => {
         if (time < cycle[index]) {
-          setTime(time + 1);
+          setTime((t) => t + 1);
         }
       }, 60000);
-      console.log("setting timeout :", one_minute_timeout);
+      console.log("setting interval :", one_minute_interval);
     }
 
     return () => {
-      console.log("Clear timeout :", one_minute_timeout);
-      clearTimeout(one_minute_timeout);
+      console.log("Clear interval :", one_minute_interval);
+      clearInterval(one_minute_interval);
     };
-  }, [time, index, cycle]);
+  }, [index, cycle]);
 
   return (
     <div className="ticker" data-testid="timer">

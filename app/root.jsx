@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import "bootstrap/dist/css/bootstrap.css";
 
 import stylesheet from "./app.css?url";
 

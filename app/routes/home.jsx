@@ -144,7 +144,7 @@ export default function Home() {
               classString="control-btn"
             />
 
-            {!ticker.startClicked && ticker.favorites.length !== 0 && (
+            {!ticker.startClicked && ticker.favorites?.length !== 0 && (
               <FavoritesDropdownButton
                 favorites={ticker.favorites}
                 onFavClick={onFavClick}

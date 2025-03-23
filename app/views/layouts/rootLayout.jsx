@@ -8,6 +8,7 @@ export default function RootLayout() {
       <div className="content-area">
         <Outlet />
       </div>
+      <footer>built by NT</footer>
     </div>
   );
 }

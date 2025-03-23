@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import Nav from "react-bootstrap/Nav";
+import Nav from "react-bootstrap/cjs/Nav.js";
 
 const activeLink = ({ isActive }) => {
   return {

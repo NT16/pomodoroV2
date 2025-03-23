@@ -32,7 +32,6 @@ export default function Home() {
   const [deleteIndex, setDeleteIndex] = useState(null);
   let [searchParams] = useSearchParams();
 
-  console.log("s :", ticker);
   //let location = useLocation();
   let calculatedCycle = useMemo(
     () => getCycle(ticker.work, ticker.shortBreak, ticker.break2),

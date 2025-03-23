@@ -5,31 +5,31 @@ const Timer = ({ cycle, onTimerDone }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    let one_minute_interval;
+    let minutes_timeout;
 
     if (time === cycle[index]) {
       setTime(0);
 
       if (index < cycle.length - 1) {
-        return setIndex(index + 1);
+        return setIndex((index) => index + 1);
       } else {
         //index has reached the last element of array cycle
         onTimerDone();
       }
     } else {
-      one_minute_interval = setInterval(() => {
+      minutes_timeout = setTimeout(() => {
         if (time < cycle[index]) {
           setTime((t) => t + 1);
         }
-      }, 60000);
-      console.log("setting interval :", one_minute_interval);
+      }, 60000 * cycle[index]);
+      console.log("setting interval :", minutes_timeout);
     }
 
     return () => {
-      console.log("Clear interval :", one_minute_interval);
-      clearInterval(one_minute_interval);
+      console.log("Clear interval :", minutes_timeout);
+      clearTimeout(minutes_timeout);
     };
-  }, [index, cycle]);
+  }, [time, index, cycle]);
 
   return (
     <div className="ticker" data-testid="timer">

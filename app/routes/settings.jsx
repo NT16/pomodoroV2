@@ -1,6 +1,6 @@
 import { useFormField } from "../resources/hooks/index";
 import { useNavigate } from "react-router";
-import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/cjs/Button.js";
 import FormField from "../views/formField";
 
 export default function Settings() {

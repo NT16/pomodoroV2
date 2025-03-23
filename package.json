@@ -5,7 +5,7 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/client/index.html"
+    "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
     "@react-router/node": "^7.3.0",

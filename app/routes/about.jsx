@@ -1,22 +1,28 @@
 export default function About() {
   return (
-    <div>
+    <div class="about">
       <h3 className="page-headings">About</h3>
       <div>
-        <p>"Pomodoro", a productivity app</p>
+        <p>"Pomodoro" is a productivity app.</p>
+        <p>Divide your work into</p>
         <p>
-          Divide your work into 25 minutes slot followed by 5 minutes break (*
-          Repeat 3 more times)
+          25 minutes slot followed by 5 minutes break (* Repeat 3 more times)
         </p>
-        <p>Finish your 1 set with a 15 minutes break! </p>
+        <p>Finish 1 set with a 15 minutes break. </p>
+        <p class="bold my-16">Or </p>
         <p>
-          Or customise your work/ short break/ long break duration in "Settings"
+          Customise your work/ short break/ long break duration in{" "}
+          <span>"Settings"</span>
           tab
         </p>
       </div>
 
-      <p>
-        <b>App Built using:</b> ReactJS (React Hooks), React Router
+      <p class="mt-48">
+        <span class="bold">App Built using:</span>
+        <ul>
+          <li>ReactJS (React Hooks)</li>
+          <li>React Router</li>
+        </ul>
       </p>
     </div>
   );

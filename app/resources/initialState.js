@@ -10,10 +10,9 @@ const initialState = {
   break2: BREAK2_INITIAL_VALUE,
   done: false,
   startClicked: false,
-  favorites:
-    typeof window !== "undefined"
-      ? JSON.parse(localStorage.getItem("fav"))
-      : [[WORK_INITIAL_VALUE, SHORT_BREAK_INITIAL_VALUE, BREAK2_INITIAL_VALUE]],
+  favorites: [
+    [WORK_INITIAL_VALUE, SHORT_BREAK_INITIAL_VALUE, BREAK2_INITIAL_VALUE],
+  ],
 };
 // cycle: [25, 5, 25, 5, 25, 5, 25, 20],
 //[2,1,2]

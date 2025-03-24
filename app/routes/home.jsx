@@ -37,7 +37,6 @@ export default function Home() {
     () => getCycle(ticker.work, ticker.shortBreak, ticker.break2),
     [ticker.work, ticker.shortBreak, ticker.break2]
   );
-  console.log("computed cycle :", calculatedCycle);
 
   function checkInputValidity(value, actionType) {
     if (!Number.isNaN(value)) {
@@ -62,7 +61,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("fav", JSON.stringify(ticker.favorites));
+    let savedFavs = JSON.parse(localStorage.getItem("fav"));
+    let toSave = savedFavs
+      ? savedFavs.push(ticker.favorites)
+      : ticker.favorites;
+    window.localStorage.setItem("fav", JSON.stringify(toSave));
   }, [ticker.favorites]);
 
   const onStartClick = () => {

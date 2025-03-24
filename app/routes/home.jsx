@@ -62,9 +62,12 @@ export default function Home() {
 
   useEffect(() => {
     let savedFavs = JSON.parse(localStorage.getItem("fav"));
-    let toSave = savedFavs
-      ? savedFavs.push(ticker.favorites)
+    console.log("saved favs", savedFavs);
+    let toSave = Boolean(savedFavs)
+      ? [...savedFavs, ticker.favorites]
       : ticker.favorites;
+    console.log("toSave", toSave);
+
     window.localStorage.setItem("fav", JSON.stringify(toSave));
   }, [ticker.favorites]);
 

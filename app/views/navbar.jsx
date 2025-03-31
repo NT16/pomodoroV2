@@ -4,8 +4,11 @@ import Nav from "react-bootstrap/cjs/Nav.js";
 const activeLink = ({ isActive }) => {
   return {
     fontWeight: isActive ? "bold" : "",
-    color: isActive ? "blue" : "black",
-    textDecoration: isActive ? "underline" : "",
+    color: isActive ? "moccasin" : "black",
+    textDecoration: isActive ? "none" : "underline",
+    backgroundColor: isActive ? "rgb(108 117 125)" : "",
+    padding: isActive ? "8px" : "",
+    borderRadius: isActive ? "8px" : "",
   };
 };
 

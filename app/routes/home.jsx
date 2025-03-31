@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useReducer, useMemo } from "react";
-import { useSearchParams } from "react-router";
+import { data, useSearchParams } from "react-router";
 import Timer from "../views/timer.jsx";
 import ConditionalButton from "../views/conditionalButton.jsx";
 import DisplaySet from "../views/displaySet.jsx";
@@ -32,7 +32,6 @@ export default function Home() {
   const [deleteIndex, setDeleteIndex] = useState(null);
   let [searchParams] = useSearchParams();
 
-  //let location = useLocation();
   let calculatedCycle = useMemo(
     () => getCycle(ticker.work, ticker.shortBreak, ticker.break2),
     [ticker.work, ticker.shortBreak, ticker.break2]
@@ -46,6 +45,15 @@ export default function Home() {
       });
     }
   }
+  useEffect(() => {
+    let storedFavs = JSON.parse(window.localStorage.getItem("fav"));
+    if (storedFavs) {
+      dispatchTicker({
+        type: "SET_FAVORITES",
+        data: storedFavs,
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (searchParams.get("work")) {
@@ -53,22 +61,17 @@ export default function Home() {
       checkInputValidity(searchParams.get("shortBreak"), "SET_SHORT_BREAK");
       checkInputValidity(searchParams.get("break2"), "SET_BREAK");
       if (searchParams.get("save")) {
+        let storedFavs = JSON.parse(window.localStorage.getItem("fav"));
         dispatchTicker({
           type: "SAVE_TO_FAVORITES",
+          data: storedFavs,
         });
       }
     }
   }, []);
 
   useEffect(() => {
-    let savedFavs = JSON.parse(localStorage.getItem("fav"));
-    console.log("saved favs", savedFavs);
-    let toSave = Boolean(savedFavs)
-      ? [...savedFavs, ticker.favorites]
-      : ticker.favorites;
-    console.log("toSave", toSave);
-
-    window.localStorage.setItem("fav", JSON.stringify(toSave));
+    window.localStorage.setItem("fav", JSON.stringify(ticker.favorites));
   }, [ticker.favorites]);
 
   const onStartClick = () => {

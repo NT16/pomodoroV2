@@ -3,16 +3,19 @@ export default function About() {
     <div class="about">
       <h3 className="page-headings">About</h3>
       <div>
-        <p>"Pomodoro" is a productivity app.</p>
-        <p>Divide your work into</p>
-        <p>
-          25 minutes slot followed by 5 minutes break (* Repeat 3 more times)
-        </p>
-        <p>Finish 1 set with a 15 minutes break. </p>
-        <p class="bold my-16">Or </p>
+        <div className="line-height-8 mt-32">
+          <p>
+            <span className="bold">"Pomodoro"</span> is a productivity app.
+          </p>
+          <p>Divide your work into</p>
+          <p>25 minutes slot followed by 5 minutes break</p>
+          <p>(* Repeat 3 more times)</p>
+          <p>Finish 1 set with a 15 minutes break. </p>
+        </div>
+        <p className="bold my-16">Or </p>
         <p>
           Customise your work/ short break/ long break duration in{" "}
-          <span>"Settings"</span>
+          <span className="bold">"Settings" </span>
           tab
         </p>
       </div>

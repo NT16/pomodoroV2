@@ -134,6 +134,11 @@ footer {
   margin: 0 1%;
 }
 
+.fav-labels {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .fav-close {
   border: none;
   margin-left: auto;
@@ -212,4 +217,12 @@ footer {
 
 .about ul li {
   padding-left: 8px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.line-height-8 {
+  line-height: 8px;
 }

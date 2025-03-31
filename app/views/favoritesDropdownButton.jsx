@@ -19,7 +19,8 @@ const FavoritesDropdownButton = ({
         <Dropdown.Item key={e.toString()}>
           <div className="fav-row">
             <span onClick={() => onFavClick(e)}>
-              Work: {e[0]} min. , Breaks: {e[1]}, {e[2]} min.
+              <span className="fav-labels">Work</span> : {e[0]} min. ,{" "}
+              <span className="fav-labels">Breaks</span> : {e[1]}, {e[2]} min.
             </span>
 
             <button

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div class="about">
+    <div className="about">
       <h3 className="page-headings">About</h3>
       <div>
         <div className="line-height-8 mt-32">
@@ -20,13 +20,13 @@ export default function About() {
         </p>
       </div>
 
-      <p class="mt-48">
-        <span class="bold">App Built using:</span>
+      <div className="mt-48">
+        <span className="bold">App Built using:</span>
         <ul>
           <li>ReactJS (React Hooks)</li>
           <li>React Router</li>
         </ul>
-      </p>
+      </div>
     </div>
   );
 }

@@ -60,7 +60,8 @@ export default function Home() {
       checkInputValidity(searchParams.get("work"), "SET_WORK");
       checkInputValidity(searchParams.get("shortBreak"), "SET_SHORT_BREAK");
       checkInputValidity(searchParams.get("break2"), "SET_BREAK");
-      if (searchParams.get("save")) {
+
+      if (searchParams.get("save") === "true") {
         let storedFavs = JSON.parse(window.localStorage.getItem("fav"));
         dispatchTicker({
           type: "SAVE_TO_FAVORITES",
@@ -71,7 +72,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("fav", JSON.stringify(ticker.favorites));
+    if (ticker.favorites.length > 1) {
+      window.localStorage.setItem("fav", JSON.stringify(ticker.favorites));
+    }
   }, [ticker.favorites]);
 
   const onStartClick = () => {

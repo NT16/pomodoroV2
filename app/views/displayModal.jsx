@@ -14,7 +14,7 @@ function DisplayModal({ setShow, onYes }) {
         <Modal.Title>You are about to delete this...</Modal.Title>
       </Modal.Header>
       <Modal.Footer>
-        <Button variant="primary" onClick={onYesClick}>
+        <Button className="btn-moccasin" onClick={onYesClick}>
           Yes, Delete
         </Button>
         <Button variant="secondary" onClick={() => setShow(false)}>

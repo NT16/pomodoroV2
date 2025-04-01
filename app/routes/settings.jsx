@@ -55,7 +55,10 @@ export default function Settings() {
             </label>
           </div>
         </div>
-        <Button type="submit" variant="secondary" className="full-width">
+        <Button
+          type="submit"
+          variant="secondary"
+          className="full-width my-auto btn-moccasin">
           Go
         </Button>
       </form>

@@ -139,10 +139,12 @@ footer {
   text-decoration: underline;
 }
 
+.fav-text {
+  margin: 0 8px;
+}
 .fav-close {
   border: none;
   margin-left: auto;
-  margin-right: -5%;
   background-color: white;
   padding: unset !important;
 }
@@ -225,4 +227,14 @@ footer {
 
 .line-height-8 {
   line-height: 8px;
+}
+
+.btn-moccasin {
+  background-color: moccasin !important;
+  color: black !important;
+  border-color: rgb(156, 159, 163) !important;
+}
+
+.my-auto {
+  margin: 0 auto;
 }

@@ -238,3 +238,18 @@ footer {
 .my-auto {
   margin: 0 auto;
 }
+
+.moccasin-bg {
+  background-color: moccasin;
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.wrap-long-text {
+  word-wrap: break-word;
+  line-height: normal;
+}
+
+.p-8 {
+  padding: 8px;
+}

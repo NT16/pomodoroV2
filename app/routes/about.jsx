@@ -5,10 +5,13 @@ export default function About() {
       <div>
         <div className="line-height-8 mt-32">
           <p>
-            <span className="bold">"Pomodoro"</span> is a productivity app.
+            <span className="bold moccasin-bg">"Pomodoro"</span> is a
+            productivity app.
           </p>
           <p>Divide your work into</p>
-          <p>25 minutes slot followed by 5 minutes break</p>
+          <p className="wrap-long-text">
+            25 minutes slot followed by 5 minutes break
+          </p>
           <p>(* Repeat 3 more times)</p>
           <p>Finish 1 set with a 15 minutes break. </p>
         </div>
@@ -21,7 +24,7 @@ export default function About() {
       </div>
 
       <div className="mt-48">
-        <span className="bold">App Built using:</span>
+        <span className="bold moccasin-bg p-8">App Built using:</span>
         <ul>
           <li>ReactJS (React Hooks)</li>
           <li>React Router</li>

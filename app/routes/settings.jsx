@@ -31,7 +31,7 @@ export default function Settings() {
   return (
     <div className="container">
       <h3 className="page-headings">Set your own timers</h3>
-      <p>mention all time duration in minutes...</p>
+      <p>mention time durations in minutes...</p>
       <form
         onSubmit={onFormSubmit}
         className="form-container center-content"

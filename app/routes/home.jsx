@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useReducer, useMemo } from "react";
-import { data, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
 import Timer from "../views/timer.jsx";
 import ConditionalButton from "../views/conditionalButton.jsx";
 import DisplaySet from "../views/displaySet.jsx";
@@ -126,8 +126,8 @@ export default function Home() {
     <div className="content">
       {showModal && <DisplayModal setShow={setShowModal} onYes={deleteFav} />}
 
-      <div className="text-center">
-        <div className="controls">
+      <div className="text-center display-wrapper">
+        <div className="controls time-setting-display">
           <DisplaySet
             work={ticker.work}
             shortBreak={ticker.shortBreak}

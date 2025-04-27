@@ -7,7 +7,7 @@ const activeLink = ({ isActive }) => {
     color: isActive ? "moccasin" : "black",
     textDecoration: isActive ? "none" : "underline",
     backgroundColor: isActive ? "rgb(108 117 125)" : "",
-    padding: isActive ? "8px" : "",
+    padding: isActive ? "4px 8px" : "",
     borderRadius: isActive ? "8px" : "",
   };
 };

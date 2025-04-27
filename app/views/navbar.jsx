@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import Nav from "react-bootstrap/cjs/Nav.js";
-import Dropdown from "react-bootstrap/Dropdown";
+import Dropdown from "react-bootstrap/cjs/Dropdown";
 
 const activeLink = ({ isActive }) => {
   return {

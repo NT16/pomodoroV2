@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Toast from "react-bootstrap/Toast";
-import { ToastContainer } from "react-bootstrap";
+import Toast from "react-bootstrap/cjs/Toast";
+import { ToastContainer } from "react-bootstrap/cjs";
 function MessageToast({ header, children }) {
   const [show, setShow] = useState(true);
 

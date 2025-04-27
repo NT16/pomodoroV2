@@ -11,8 +11,11 @@ import initialState from "../resources/initialState.js";
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Pomodoro" },
+    {
+      name: "description",
+      content: "Stay productive with time boxing your work and breaks",
+    },
   ];
 }
 const getCycle = (work, shortBreak, break2) => {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import sound from "/Taptap.m4a";
 
 const Timer = ({ cycle, onTimerDone }) => {
   const [time, setTime] = useState(0);
@@ -8,9 +9,16 @@ const Timer = ({ cycle, onTimerDone }) => {
   const isWork = index % 2 === 0;
 
   useEffect(() => {
+    function playSound() {
+      new Audio(sound).play().catch((error) => {
+        console.error("Error playing sound:", error);
+      });
+    }
+
     let minutes_timeout;
 
     if (time === cycle[index]) {
+      playSound();
       setTime(0);
 
       if (index < cycle.length - 1) {

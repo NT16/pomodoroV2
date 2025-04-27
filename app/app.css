@@ -10,10 +10,30 @@
   flex-direction: column;
 }
 
+/*Mobile only menu*/
+
+.mobile-menu-toggle::after {
+  content: unset !important;
+}
+.mobile-menu-dropdown {
+  background-color: rgb(255 255 255) !important;
+  min-width: 100vw !important;
+  border-radius: 0 !important;
+  border-color: #fff !important;
+  border-bottom: var(--bs-dropdown-border-width) solid
+    var(--bs-dropdown-border-color) !important;
+}
+.mobile-menu-item {
+  display: flex !important
+;
+  justify-content: end !important;
+}
+
 .content-area {
   flex-grow: 1;
-  margin-top: 16px;
+  margin-top: 32px;
 }
+
 .tomato {
   width: 320px;
   margin: 0 auto;
@@ -23,10 +43,6 @@
   background-image: url("/tomato.png");
   background-repeat: no-repeat;
   background-size: contain;
-  /*
-  background-position-x: center;
-  background-position-y: -10px;
-  */
   color: white;
   width: 260px;
   height: 260px;
@@ -226,6 +242,9 @@ footer .built-by {
 }
 
 @media only screen and (max-width: 600px) {
+  .content-area {
+    margin-top: 40px;
+  }
   .form-container {
     width: 100%;
   }
@@ -385,6 +404,7 @@ footer .built-by {
 @media screen and (max-width: 600px) {
   .tomato-bg {
     position: relative;
+    margin: 16px auto;
   }
 
   .progress-display-set,

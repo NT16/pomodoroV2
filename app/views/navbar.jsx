@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import Nav from "react-bootstrap/cjs/Nav.js";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const activeLink = ({ isActive }) => {
   return {
@@ -15,12 +16,45 @@ const activeLink = ({ isActive }) => {
 export default function Navbar() {
   return (
     <div className="row header">
-      <h1 className="col-md-6 col-xs-12 app-name">Pomodoro</h1>
+      <h1 className="col-md-6 col-10 app-name">Pomodoro</h1>
+      <Dropdown className="col-2 d-md-none d-flex justify-content-end">
+        <Dropdown.Toggle
+          variant="secondary"
+          id="dropdown-basic"
+          className="d-md-none mobile-menu-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-three-dots-vertical"
+            viewBox="0 0 16 16">
+            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+          </svg>
+        </Dropdown.Toggle>
 
+        <Dropdown.Menu className="mobile-menu-dropdown">
+          <Dropdown.Item className="mobile-menu-item">
+            <NavLink to="/" style={activeLink} end>
+              Home
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item className="mobile-menu-item">
+            <NavLink to="/settings" style={activeLink} end>
+              Settings
+            </NavLink>
+          </Dropdown.Item>
+          <Dropdown.Item className="mobile-menu-item">
+            <NavLink to="/about" style={activeLink} end>
+              About
+            </NavLink>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
       <Nav
         variant="underline"
         defaultActiveKey="/"
-        className="navbar-margin col-md-6 col-xs-12 justify-content-end"
+        className="navbar-margin col-md-6 justify-content-end  d-none d-md-flex"
         //activeKey={location.pathname}
       >
         <Nav.Item>
@@ -42,42 +76,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-/*
-<nav className="header bg-light-800 border-b-1 border-gray-300">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">Pomodoro</div>
-            <div className="sm:ml-6 sm:block">
-              <div className="flex justify-end space-x-4">
-                <NavLink
-                  to="/"
-                  style={activeLink}
-                  className="rounded-md bg-gray-100 px-3 py-2 text-sm font-medium hover:bg-gray-400 hover:text-white"
-                  end>
-                  Home
-                </NavLink>
-
-                <NavLink
-                  to="/settings"
-                  style={activeLink}
-                  className="rounded-md bg-gray-100 px-3 py-2 text-sm font-medium hover:bg-gray-400 hover:text-white"
-                  end>
-                  Settings
-                </NavLink>
-
-                <NavLink
-                  to="/about"
-                  style={activeLink}
-                  className="rounded-md bg-gray-100 px-3 py-2 text-sm font-medium hover:bg-gray-400 hover:text-white"
-                  end>
-                  About
-                </NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-*/

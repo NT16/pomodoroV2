@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useReducer, useMemo } from "react";
 import { useSearchParams } from "react-router";
+import MessageToast from "../views/toast";
 import Timer from "../views/timer.jsx";
 import ConditionalButton from "../views/conditionalButton.jsx";
 import DisplaySet from "../views/displaySet.jsx";
@@ -125,6 +126,14 @@ export default function Home() {
   return (
     <div className="content">
       {showModal && <DisplayModal setShow={setShowModal} onYes={deleteFav} />}
+      {Boolean(searchParams.get("work")) && (
+        <MessageToast header="Success">
+          <div>
+            Your timer has been saved to favorites. You can find it in the
+            favorites dropdown.
+          </div>
+        </MessageToast>
+      )}
 
       <div className="text-center display-wrapper">
         <div className="controls time-setting-display">

@@ -132,7 +132,7 @@ footer .built-by {
 }
 
 .time-setting-display {
-  /* margin: 16px;*/
+  margin: 16px;
 }
 .ticker {
   display: flex;
@@ -263,6 +263,9 @@ footer .built-by {
     width: 100%;
   }
 
+  .time-setting-display {
+    margin: 0;
+  }
   .ticker {
     margin-top: unset;
   }

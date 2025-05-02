@@ -11,6 +11,9 @@
 }
 
 /*Mobile only menu*/
+.mobile-menu-toggle {
+  padding: 2px 8px;
+}
 
 .mobile-menu-toggle::after {
   content: unset !important;

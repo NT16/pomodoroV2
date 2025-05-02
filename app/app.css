@@ -128,10 +128,11 @@ footer .built-by {
 .display-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .time-setting-display {
-  margin: 16px;
+  /* margin: 16px;*/
 }
 .ticker {
   display: flex;
@@ -154,6 +155,19 @@ footer .built-by {
   display: flex;
   margin: 0 auto;
   line-height: 120px;
+}
+
+.timer-display-header {
+  align-items: center;
+  display: flex;
+}
+
+.mute {
+  width: fit-content;
+  border-radius: 8px;
+  padding: 1px 4px;
+  background-color: #e9dfdf;
+  margin: 0 0 0 32px;
 }
 
 .full-width {
@@ -419,7 +433,7 @@ footer .built-by {
   }
 
   .display-set {
-    margin: 16px auto 8px auto !important;
+    margin: 16px auto 16px auto !important;
     width: 275px;
     padding: 8px;
   }

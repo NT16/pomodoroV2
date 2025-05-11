@@ -1,16 +1,36 @@
-# Welcome to React Router!
+# Pomodoro
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Stay focused while working by slotting work and breaks into pre-defined time span.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Home
+
+- "Start" your Pomodoro and get working
+- Change your time slots through "Favorites"
+- "Cancel" if you wish to stop the timer and discard your current tracker
+- "Reset" when you have finished your one Pomodoro set and wish to start a new Pomodoro
+
+Settings
+
+- Configure your personalised timers
+- if you wish to remember this setting , check on "Add to Favourites"
+
+## Built with
+
+- ReactJS v19
+- React Router v7
+- Bootstrap , React-Bootstrap
+
+## Developer insights
+
+- [React Router template](https://reactrouter.com/start/framework/installation) was used to set up this entire project
+- localstorage is used to save your favorite timer settings
+- [Audio](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) used to indicate when each time slot is done
+- Server side rendered app
+- Deployed through [Render](https://render.com/)
+
+---
 
 ## Getting Started
 
@@ -75,10 +95,6 @@ Make sure to deploy the output of `npm run build`
 │   ├── client/    # Static assets
 │   └── server/    # Server-side code
 ```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
